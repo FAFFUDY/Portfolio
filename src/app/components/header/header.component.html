@@ -1,0 +1,44 @@
+<!-- header.component.html -->
+<header class="header">
+    <nav class="tabs">
+        <ul>
+            <li *ngFor="let tab of tabs" (click)="scrollToSection(tab.id)">
+                <a>{{ tab.label }}</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Sections to scroll to -->
+<!-- <section id="home" class="section">Home Section</section>
+<section id="about" class="section">About Section</section>
+<section id="services" class="section">Services Section</section>
+<section id="contact" class="section">Contact Section</section> -->
+
+<section id="home">
+<app-home [backgroundImage]="'assets/image1.jpg'">
+    <h1>Welcome to the Parallax Effect</h1>
+    <p>Scroll down to see the effect in action.</p>
+</app-home>
+</section>
+
+<section id="about">
+<div class="section">
+    <h2>Regular Content Section</h2>
+    <p>This is a regular content section. Scroll down to see more.</p>
+</div>
+</section>
+
+<section id="services">
+<app-home [backgroundImage]="'assets/image1.jpg'">
+    <h1>Another Parallax Section</h1>
+    <p>Keep scrolling to see more.</p>
+</app-home>
+</section>
+
+<section id="contact">
+<div class="section">
+    <h2>Another Regular Content Section</h2>
+    <p>This is another regular content section.</p>
+</div>
+</section>

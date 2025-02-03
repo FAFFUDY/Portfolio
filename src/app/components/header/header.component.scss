@@ -1,0 +1,60 @@
+/* header.component.css */
+.header {
+    background-color: #000;
+    color: #fff;
+    padding: 30px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .tabs ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .tabs li {
+    margin: 0 60px;
+    cursor: pointer;
+  }
+  
+  .tabs a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .tabs a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ff6347; /* Hover color */
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  
+  .tabs a:hover {
+    color: #ff6347; /* Hover color */
+  }
+  
+  .tabs a:hover::after {
+    width: 100%;
+  }
+  
+  .section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background-color: #1a1a1a;
+    color: #fff;
+    border-bottom: 1px solid #333;
+  }
