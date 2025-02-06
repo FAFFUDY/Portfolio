@@ -1,11 +1,49 @@
 .card {
-    margin-right: 30px;
-    margin-left: 30px;
-    margin-top: 60px;
+    // margin-right: 60px;
+    gap: 10px;
+    // margin-top: 100px;
     width: 400px;
     height: 545px;
     border-radius: 30px;
+    flex-shrink:5;
     background: #212121;
     box-shadow: 15px 15px 30px rgb(25, 25, 25),
                 -15px -15px 30px rgb(60, 60, 60);
    }
+
+   @media (min-width: 768px){
+    .card {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      margin-right: 30px;
+      margin-left: 30px;
+    }
+  }
+
+   @media (min-width: 426px) and (max-width: 768px) {
+    .card {
+      width: 700px;
+      height: 300px;
+      line-height: 200px;
+      flex-shrink:5;
+    }
+  }
+  
+  /* Adjust size for mobile devices */
+  @media (min-width: 376px) and (max-width: 426px) {
+    .card {
+      width: 400px;
+      height: 320px;
+      line-height: 100px;
+    }
+  }
+
+  @media (min-width: 0px) and (max-width: 376px) {
+    .card {
+      width: 350px;
+      height: 350px;
+      line-height: 40px;
+    }
+  }
+  

@@ -6,15 +6,17 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    flex-shrink:5;
   }
   
   .container button {
-    width: 150px;
-    height: 150px;
+    width: 100px auto;
+    height: 100px auto;
     border: none;
     background-color: #313638;
     transition: 0.3s;
     cursor: pointer;
+    flex-shrink:5;
   }
   
   .icon {
