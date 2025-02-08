@@ -5,7 +5,7 @@ body, html {
     padding: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    
+// background-color: #000000;
 }
 
 /* Content Section */
@@ -16,52 +16,9 @@ body, html {
 }
 
 
-.typing-effect-header {
-    overflow: hidden; /* Ensures the text is hidden until it "types" */
-    white-space: nowrap; /* Keeps the text on a single line */
-    margin: 0 auto; /* Centers the text */
-    letter-spacing: 0.15em; /* Adds spacing between letters for a typewriter feel */
-    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-    margin-bottom: 600px;
-    font-size: 5vw;
-    margin-top: -4vw;
-  }
-
-  /* Typing effect for multi-line text */
-  .typing-effect {
-    margin: 0;
-    white-space: pre-wrap; /* Preserve line breaks and spaces */
-    overflow: hidden; /* Hide overflow */
-    border-right: 2px solid #d4d4d4; /* Cursor effect */
-    animation: typing 3s steps(100, end), blink-caret 0.75s step-end infinite;
-    font-family: "Courier New", monospace;
-    align-content: flex-start;
-  }
-  
-  /* Typing animation */
-  @keyframes typing {
-    from {
-      width: 0; /* Start with no width (hidden text) */
-    }
-    to {
-      width: 100%; /* Expand to full width (reveal text) */
-    }
-  }
-  
-  /* Blinking cursor effect */
-  @keyframes blink-caret {
-    from, to {
-      border-right-color: transparent; /* Hide cursor */
-    }
-    50% {
-      border-right-color: #d4d4d400; /* Show cursor */
-    }
-  }
-
-  /* From Uiverse.io by iZOXVL */ 
 .boton-elegante {
   padding: 15px 30px;
-  border: 2px solid #2c2c2c;
+  border: 2px solid #ff6347;
   background-color: #1a1a1a;
   color: #ffffff;
   font-size: 1.2rem;
@@ -95,25 +52,100 @@ body, html {
 }
 
 .boton-elegante:hover {
-  border-color: #666666;
-  background: #292929;
+  border-color: #f13e3e;
+  background: #ef0d0d;
 }
 
-@media (max-width: 376px) {
-  .typing-effect-header{
-    margin-top: -200px;
-  }
-}
-
-@media (max-width: 426px) {
-  .typing-effect-header{
-    margin-top: -200px;
+@media (max-width: 768px) {
+  .boton-elegante {
+    width: 30%;
+    height: 10%;
+    font-size: 1.2rem;
+    justify-content: center;
+    padding: 0;
   }
   
 }
 
-@media (max-width< 769px) {
-  .typing-effect-header{
-    margin-top: -150px;
+@media (max-width: 480px) {
+  .boton-elegante {
+    width: 30%;
+    height: 10%;
+    font-size: 0.6rem;
+    justify-content: center;
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .typing-effect-header {
+    margin-top: 300px;
+  }
+}
+
+
+.titlecontainer {
+  width: 80%;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.animated-title {
+  font-size: 2.5rem;
+  color: #333;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.titlecontent {
+  margin-top: 20px;
+}
+
+.tilecontent p {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .titlecontainer {
+      width: 90%;
+  }
+
+  .animated-title {
+      font-size: 2rem;
+  }
+
+  .titlecontent p {
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .titlecontainer {
+      width: 95%;
+  }
+
+  .animated-title {
+      font-size: 1.5rem;
+  }
+
+  .titlecontent p {
+      font-size: 0.9rem;
   }
 }

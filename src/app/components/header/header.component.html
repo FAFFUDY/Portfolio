@@ -1,68 +1,96 @@
-<!-- header.component.html -->
-<header class="header">
-    <nav class="tabs">
-        <ul>
-            <li *ngFor="let tab of tabs" (click)="scrollToSection(tab.id)">
-                <a>{{ tab.label }}</a>
-            </li>
-        </ul>
-    </nav>
-</header>
+<div>
+    <header class="header">
+        <nav class="tabs">
+            <ul>
+                <li *ngFor="let tab of tabs" (click)="scrollToSection(tab.id)">
+                    <a>{{ tab.label }}</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-<!-- Sections to scroll to -->
-<!-- <section id="home" class="section">Home Section</section>
-<section id="about" class="section">About Section</section>
-<section id="services" class="section">Services Section</section>
-<section id="contact" class="section">Contact Section</section> -->
+    <section id="home">
+        <app-home [backgroundImage]="'assets/image1.jpg'">
+            <div class="titlecontainer animated-title">
+                <h1 class="animated-title" style="margin-bottom: -2%;color: #ff6347">HELLO!
+                    <span style="color: #f7f7f7">I'M</span>
+                </h1>
+                <h1 class="animated-title" style="color: #ff6347">ANKUSH NEELAKANTH SONAR</h1>
+                <!-- <div class="titlecontent"  id="typing-animation">
+                    <p style="font-size: 29px; font-weight: bold;">SOFTWARE Engineering</p>
+                    <p>This is a paragraph inside the container. The container size changes according to the screen
+                        size, and the title has a cool animation!</p>
+                </div> -->
+                <h2 *ngIf="currentDiv" class="animated-title">{{ currentDiv }}</h2>
+                <button class="boton-elegante" style="margin-right:1%;">LINKEDIN</button>
+                <button class="boton-elegante">RESUME</button>
+            </div>
 
-<section id="home">
-    <app-home [backgroundImage]="'assets/image1.jpg'">
-        <h2 class="typing-effect-header">ANKUSH NEELAKANT SONAR</h2>
-    </app-home>
-</section>
+        </app-home>
+    </section>
 
-<section id="about">
-    <div class="section">
-        <!-- <app-card class="card1"></app-card>
+    <section id="about">
+        <div class="section">
+            <!-- <app-card class="card1"></app-card>
         <app-card class="card2"></app-card> -->
-    </div>
-</section>
+        </div>
+    </section>
 
-<section id="services">
-    <app-home [backgroundImage]="'assets/image1.jpg'">
-        <h1>Another Parallax Section</h1>
-        <p>Keep scrolling to see more.</p>
-    </app-home>
-</section>
+    <section id="services">
+        <app-home [backgroundImage]="'assets/image1.jpg'">
+            <h1>Another Parallax Section</h1>
+            <p>Keep scrolling to see more.</p>
+        </app-home>
+    </section>
 
-<section id="contact">
-    <div class="section4">
-        <div class="container" style="margin-top: 100px;">
-            <div class="image-section">
-                <img src="assets/download.png" alt="Sample Image">
+    <section id="contact">
+        <div class="section4">
+            <div class="container animated-title" style="margin-top: 100px;">
+                <div class="image-section">
+                    <img src="assets/adas.gif" alt="Sample Image">
+                </div>
+                <div class="about-section">
+                    <h2>About Us</h2>
+                    <p>· ADAS, or Advanced Driver Assistance Systems, refers to a set of technologies integrated into
+                        modern vehicles to enhance driver safety
+                        and improve overall driving experience.
+                    </p>
+                    <p>
+                        · ADAS utilizes sensors, cameras, radar, and other advanced technologies to provide real-time
+                        information about the vehicle's
+                        surroundings.</p>
+                </div>
             </div>
-            <div class="about-section">
-                <h2>About Us</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque leo a libero tincidunt, eu fermentum justo tincidunt. Vivamus lacinia, nisi id aliquet tincidunt, nunc nisl tincidunt nunc, nec tincidunt nunc nisl nec nunc.</p>
+            <div class="container" style="margin-top: 50px;">
+                <div class="image-section">
+                    <img src="assets/periods.png" alt="Sample Image">
+                </div>
+                <div class="about-section">
+                    <h2>About Us</h2>
+                    <p>· Developed a menstrual and ovulation cycle tracking feature, enabling users to monitor cycles
+                        and predict fertile windows with 20% more
+                        precision.
+                    <p>
+                        · Implemented customizable cycle length functionality, allowing users to input personal data for
+                        tailored and accurate predictions.
+                    </p>
+                    <p>
+                        · Designed a dynamic cycle adjustment feature, ensuring real-time updates and predictions based
+                        on user-modified cycle data
+                    </p>
+                </div>
+            </div>
+            <div class="container" style="margin-top: 50px;">
+                <div class="image-section">
+                    <img src="your-image.jpg" alt="Sample Image">
+                </div>
+                <div class="about-section">
+                    <h2>About Us</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque leo a libero
+                        tincidunt, eu fermentum justo tincidunt. Vivamus lacinia, nisi id aliquet tincidunt, nunc nisl
+                        tincidunt nunc, nec tincidunt nunc nisl nec nunc.</p>
+                </div>
             </div>
         </div>
-        <div class="container" style="margin-top: 50px;">
-            <div class="image-section">
-                <img src="assets/your-image.jpg" alt="Sample Image">
-            </div>
-            <div class="about-section">
-                <h2>About Us</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque leo a libero tincidunt, eu fermentum justo tincidunt. Vivamus lacinia, nisi id aliquet tincidunt, nunc nisl tincidunt nunc, nec tincidunt nunc nisl nec nunc.</p>
-            </div>
-        </div>
-        <div class="container" style="margin-top: 50px;">
-            <div class="image-section" >
-                <img src="your-image.jpg" alt="Sample Image">
-            </div>
-            <div class="about-section">
-                <h2>About Us</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque leo a libero tincidunt, eu fermentum justo tincidunt. Vivamus lacinia, nisi id aliquet tincidunt, nunc nisl tincidunt nunc, nec tincidunt nunc nisl nec nunc.</p>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
+</div>
