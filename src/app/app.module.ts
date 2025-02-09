@@ -20,7 +20,8 @@ import { SocialMediaComponent } from './components/social-media/social-media.com
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    BrowserModule
   ],
   providers: [
     provideClientHydration()

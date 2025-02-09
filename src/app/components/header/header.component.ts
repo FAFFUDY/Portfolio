@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,10 +8,29 @@ import { Component, Input, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   ngOnInit() {
-    this.scrollToSection('home');
+    this.scrollToSection('');
     this.startInterval();
-  }
+    const sections = ['home', 'about', 'services', 'contact'];
+    window.addEventListener('scroll', this.onScroll.bind(this));
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            this.activeTab = entry.target.id;
+          }
+        });
+      },
+      { threshold: 0.3 } // Trigger when 50% of the element is visible
+    );
 
+    // Observe each section
+    sections.forEach((section) => {
+      const element = document.getElementById(section);
+      if (element) {
+        observer.observe(element);
+      }
+    });
+  }
   constructor() { }
 
   tabs = [
@@ -20,22 +39,23 @@ export class HeaderComponent implements OnInit {
     { id: 'services', label: 'Services' },
     { id: 'contact', label: 'Contact' }
   ];
+  activeTab = 'home';
 
-   // Array of div content
-   divs: string[] = ['WEB DEVELOPER', 'SOFTWARE DEVELOPER', 'ANGULAR DEVELOPER', 'SPRING BOOT DEVELOPER'];
+  // Array of div content
+  divs: string[] = ['WEB DEVELOPER', 'SOFTWARE DEVELOPER', 'ANGULAR DEVELOPER', 'SPRING BOOT DEVELOPER'];
 
-   // Index of the currently displayed div
-   currentIndex: number = 0;
- 
-   // Interval reference
-   private intervalId: any;
- 
-   // Get the current div content
-   get currentDiv(): string {
-     return this.divs[this.currentIndex];
-   }
+  // Index of the currently displayed div
+  currentIndex: number = 0;
 
-   ngOnDestroy(): void {
+  // Interval reference
+  private intervalId: any;
+
+  // Get the current div content
+  get currentDiv(): string {
+    return this.divs[this.currentIndex];
+  }
+
+  ngOnDestroy(): void {
     // Clear the interval when the component is destroyed
     this.clearInterval();
   }
@@ -62,10 +82,29 @@ export class HeaderComponent implements OnInit {
 
   scrollToSection(sectionId: string) {
     const element = document.getElementById(sectionId);
+    // this.activeTab = sectionId;
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
 
 
+  onScroll() {
+    const sections = ['home', 'about', 'services', 'contact'];
+    for (const section of sections) {
+      const element = document.getElementById(section);
+      if (element && this.isElementInViewport(element)) {
+        this.activeTab = section;
+        break;
+      }
+    }
+  }
+
+  isElementInViewport(el: HTMLElement): boolean {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+    );
+  }
 }
