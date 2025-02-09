@@ -1,4 +1,5 @@
-import { Component, HostListener, Input, OnDestroy, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnDestroy, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -8,30 +9,32 @@ import { Component, HostListener, Input, OnDestroy, OnInit } from '@angular/core
 export class HeaderComponent implements OnInit {
 
   ngOnInit() {
-    this.scrollToSection('home');
-    this.startInterval();
-    const sections = ['home', 'about', 'services', 'project'];
-    window.addEventListener('scroll', this.onScroll.bind(this));
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            this.activeTab = entry.target.id;
-          }
-        });
-      },
-      { threshold: 0.3 } // Trigger when 50% of the element is visible
-    );
+    if (isPlatformBrowser(this.platformId)) {
+      this.scrollToSection('home');
+      this.startInterval();
+      const sections = ['home', 'about', 'services', 'project'];
+      window.addEventListener('scroll', this.onScroll.bind(this));
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              this.activeTab = entry.target.id;
+            }
+          });
+        },
+        { threshold: 0.3 } // Trigger when 50% of the element is visible
+      );
 
-    // Observe each section
-    sections.forEach((section) => {
-      const element = document.getElementById(section);
-      if (element) {
-        observer.observe(element);
-      }
-    });
+      // Observe each section
+      sections.forEach((section) => {
+        const element = document.getElementById(section);
+        if (element) {
+          observer.observe(element);
+        }
+      });
+    }
   }
-  constructor() { }
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
 
   tabs = [
     { id: 'home', label: 'Home' },
@@ -80,45 +83,55 @@ export class HeaderComponent implements OnInit {
   }
 
 
-  scrollToSection(sectionId: string) {
-    const element = document.getElementById(sectionId);
-    // this.activeTab = sectionId;
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  scrollToSection(sectionId: string): void {
+    if (isPlatformBrowser(this.platformId)) {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
   }
 
 
   onScroll() {
-    const sections = ['home', 'about', 'services', 'project'];
-    for (const section of sections) {
-      const element = document.getElementById(section);
-      if (element && this.isElementInViewport(element)) {
-        this.activeTab = section;
-        break;
+    if (isPlatformBrowser(this.platformId)) {
+      const sections = ['home', 'about', 'services', 'project'];
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element && this.isElementInViewport(element)) {
+          this.activeTab = section;
+          break;
+        }
       }
     }
   }
 
   isElementInViewport(el: HTMLElement): boolean {
-    const rect = el.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
-    );
+    if (isPlatformBrowser(this.platformId)) {
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+      );
+    }
+    return false;
   }
 
-  downloadMyFile(){
-    const link = document.createElement('a');
-    link.setAttribute('target', '_blank');
-    link.setAttribute('href', 'assets/');
-    link.setAttribute('download', `Ankush_Sonar.pdf`);
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
+  downloadMyFile() {
+    if (isPlatformBrowser(this.platformId)) {
+      const link = document.createElement('a');
+      link.setAttribute('target', '_blank');
+      link.setAttribute('href', 'assets/');
+      link.setAttribute('download', `Ankush_Sonar.pdf`);
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+    }
   }
 
-  goToWebsite(String: any){
-    window.location.href = 'https://www.linkedin.com/in/ankush-sonar-15b4ba205/';
+  goToWebsite(String: any) {
+    if (isPlatformBrowser(this.platformId)) {
+      window.location.href = 'https://www.linkedin.com/in/ankush-sonar-15b4ba205/';
+    }
   }
 }
