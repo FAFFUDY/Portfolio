@@ -8,7 +8,7 @@ import { Component, HostListener, Input, OnDestroy, OnInit } from '@angular/core
 export class HeaderComponent implements OnInit {
 
   ngOnInit() {
-    this.scrollToSection('');
+    this.scrollToSection('home');
     this.startInterval();
     const sections = ['home', 'about', 'services', 'project'];
     window.addEventListener('scroll', this.onScroll.bind(this));
@@ -106,5 +106,19 @@ export class HeaderComponent implements OnInit {
       rect.top >= 0 &&
       rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
     );
+  }
+
+  downloadMyFile(){
+    const link = document.createElement('a');
+    link.setAttribute('target', '_blank');
+    link.setAttribute('href', 'assets/');
+    link.setAttribute('download', `Ankush_Sonar.pdf`);
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  }
+
+  goToWebsite(String: any){
+    window.location.href = 'https://www.linkedin.com/in/ankush-sonar-15b4ba205/';
   }
 }
