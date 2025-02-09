@@ -10,7 +10,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.scrollToSection('');
     this.startInterval();
-    const sections = ['home', 'about', 'services', 'contact'];
+    const sections = ['home', 'about', 'services', 'project'];
     window.addEventListener('scroll', this.onScroll.bind(this));
     const observer = new IntersectionObserver(
       (entries) => {
@@ -37,7 +37,7 @@ export class HeaderComponent implements OnInit {
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
     { id: 'services', label: 'Services' },
-    { id: 'contact', label: 'Contact' }
+    { id: 'project', label: 'Project' }
   ];
   activeTab = 'home';
 
@@ -90,7 +90,7 @@ export class HeaderComponent implements OnInit {
 
 
   onScroll() {
-    const sections = ['home', 'about', 'services', 'contact'];
+    const sections = ['home', 'about', 'services', 'project'];
     for (const section of sections) {
       const element = document.getElementById(section);
       if (element && this.isElementInViewport(element)) {

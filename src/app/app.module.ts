@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CardComponent } from './components/card/card.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SocialMediaComponent } from './components/social-media/social-media.component';
+import { TitleComponent } from './components/title/title.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { SocialMediaComponent } from './components/social-media/social-media.com
     CardComponent,
     HeaderComponent,
     SocialMediaComponent,
+    TitleComponent,
   ],
   imports: [
     BrowserModule,

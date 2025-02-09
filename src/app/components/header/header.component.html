@@ -21,7 +21,7 @@
 
 
     <section id="home">
-        <app-home [backgroundImage]="'assets/image1.jpg'">
+        <app-home [backgroundImage]="'assets/ankush_snr.jpeg'">
             <div class="titlecontainer animated-title">
                 <h1 class="animated-title" style="margin-bottom: -2%;color: #ff6347">HELLO!
                     <span style="color: #f7f7f7">I'M</span>
@@ -42,7 +42,9 @@
 
     <section id="about">
         <div class="section2">
-            <!-- <div style="margin-bottom: 80px; margin-top: 100px;"> -->
+            <div class="about-container2">
+                <app-title  [title]="'about'"></app-title>
+            </div>
             <div class="about-container">
                 <div class="about-section">
                     <p class="d-flex">Experienced Web Developer with over 2+ years of expertise, proficient in HTML,
@@ -52,25 +54,26 @@
                         A
                         regular system improvement contributor. A trainer who was successful in inspiring a team of
                         young developers to receive the highest honors in project as Lead.</p>
-                    <ul>
-                        <li class="d-flex">
-                            <span style="width: 130px;margin-left: -40px"><b>Profile:</b></span>
-                            <span style="width: calc(100% - 130px);">Web Developer</span>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class="d-flex">
-                            <span style="width: 130px;margin-left: -40px"><b>Language:</b></span>
-                            <span style="width: calc(100% - 130px);">English,Hindi,Marathi</span>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class="d-flex">
-                            <span style="width: 130px;margin-left: -40px"><b>Hobbies:</b></span>
-                            <span style="width: calc(100% - 130px);">Football,Reading Books, Animation & Ilustration
-                            </span>
-                        </li>
-                    </ul>
+                    <h3>Frontend Development:<span> 90%</span></h3>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress" style="width:90%"></div>
+                    </div>
+                    <h3>Backend Development:<span> 85%</span></h3>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress" style="width:85%"></div>
+                    </div>
+                    <h3>Databse:<span> 90%</span></h3>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress" style="width:90%"></div>
+                    </div>
+                    <h3>Deployment:<span> 75%</span></h3>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress" style="width:75%"></div>
+                    </div>
+                    <h3>Tools Knowledge:<span> 95%</span></h3>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress" style="width:95%"></div>
+                    </div>
                 </div>
             </div>
             <div class="about-container">
@@ -84,26 +87,25 @@
                         young developers to receive the highest honors in project as Lead.</p>
                     <ul>
                         <li class="d-flex">
-                            <span style="width: 130px;margin-left: -40px"><b>Profile:</b></span>
+                            <span style="width: 100px;margin-left: -40px"><b>Profile:</b></span>
                             <span style="width: calc(100% - 130px);">Web Developer</span>
                         </li>
                     </ul>
                     <ul>
                         <li class="d-flex">
-                            <span style="width: 130px;margin-left: -40px"><b>Language:</b></span>
+                            <span style="width: 100px;margin-left: -40px"><b>Language:</b></span>
                             <span style="width: calc(100% - 130px);">English,Hindi,Marathi</span>
                         </li>
                     </ul>
                     <ul>
                         <li class="d-flex">
-                            <span style="width: 130px;margin-left: -40px"><b>Hobbies:</b></span>
+                            <span style="width: 100px;margin-left: -40px"><b>Hobbies:</b></span>
                             <span style="width: calc(100% - 130px);">Football,Reading Books, Animation & Ilustration
                             </span>
                         </li>
                     </ul>
                 </div>
             </div>
-            <!-- </div> -->
         </div>
     </section>
 
@@ -114,23 +116,10 @@
         </app-home>
     </section>
 
-    <section id="contact">
+    <section id="project">
         <div class="section4">
-            <div class="container" style="margin-top: 100px;" id="sect4">
-                <div class="image-section">
-                    <img src="assets/adas.gif" alt="Sample Image">
-                </div>
-                <div class="about-section">
-                    <h2>About Us</h2>
-                    <p>· ADAS, or Advanced Driver Assistance Systems, refers to a set of technologies integrated into
-                        modern vehicles to enhance driver safety
-                        and improve overall driving experience.
-                    </p>
-                    <p>
-                        · ADAS utilizes sensors, cameras, radar, and other advanced technologies to provide real-time
-                        information about the vehicle's
-                        surroundings.</p>
-                </div>
+            <div class="about-container2">
+                <app-title style="margin-top: 70px;"  [title]="'project'"></app-title>
             </div>
             <div class="container" style="margin-top: 50px;">
                 <div class="image-section">
@@ -151,15 +140,24 @@
                     </p>
                 </div>
             </div>
-            <div class="container" style="margin-top: 50px;">
+            <div class="container" style="margin-top: 30px;">
                 <div class="image-section">
-                    <img src="your-image.jpg" alt="Sample Image">
+                    <img src="assets/adas.jpg" alt="Sample Image">
                 </div>
                 <div class="about-section">
                     <h2>About Us</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque leo a libero
-                        tincidunt, eu fermentum justo tincidunt. Vivamus lacinia, nisi id aliquet tincidunt, nunc nisl
-                        tincidunt nunc, nec tincidunt nunc nisl nec nunc.</p>
+                    <p>· ADAS, or Advanced Driver Assistance Systems, refers to a set of technologies integrated into
+                        modern vehicles to enhance driver safety
+                        and improve overall driving experience.
+                    </p>
+                    <p>
+                        · ADAS utilizes sensors, cameras, radar, and other advanced technologies to provide real-time
+                        information about the vehicle's
+                        surroundings.</p>
+                        <p>
+                            · ADAS utilizes sensors, cameras, radar, and other advanced technologies to provide real-time
+                            information about the vehicle's
+                            surroundings.</p>
                 </div>
             </div>
         </div>
