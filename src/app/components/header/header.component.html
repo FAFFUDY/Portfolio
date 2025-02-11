@@ -12,21 +12,19 @@
 
     <section id="home">
         <app-home [backgroundImage]="'assets/ankush_snr2.jpeg'">
-            <!-- <app-home class="parallax-section"> -->
-            <div class="titlecontainer animated-title" style="margin-top: 38px;">
-                <h1 class="animated-title" style="margin-bottom: -2%;color: #ff6347">HELLO!
-                    <span style="color: #f7f7f7">I'M</span>
-                </h1>
-                <h1 class="animated-title" style="color: #ff6347">ANKUSH NEELAKANTH SONAR</h1>
-                <!-- <div class="titlecontent"  id="typing-animation">
-                    <p style="font-size: 29px; font-weight: bold;">SOFTWARE Engineering</p>
-                    <p>This is a paragraph inside the container. The container size changes according to the screen
-                        size, and the title has a cool animation!</p>
-                </div> -->
-                <h2 *ngIf="currentDiv" [ngClass]="{'animated-title': currentDiv}">{{ currentDiv }}</h2>
-                <button class="boton-elegante" style="margin-right:6%;" (click)="goToWebsite('https://www.linkedin.com/in/ankush-sonar-15b4ba205/')">LINKEDIN</button>
-                <button class="boton-elegante" (click)="downloadMyFile()">RESUME</button>
-            </div>
+
+                <div class="content">
+                    <div class="titlecontainer animated-title" style="margin-top: 38px;">
+                        <h1 class="animated-title" style="margin-bottom: -2%;color: #ff6347">HELLO!
+                            <span style="color: #f7f7f7">I'M</span>
+                        </h1>
+                        <h1 class="animated-title" style="color: #ff6347">ANKUSH NEELAKANTH SONAR</h1>
+                        <h2 *ngIf="currentDiv" [ngClass]="{'animated-title': currentDiv}">{{ currentDiv }}</h2>
+                        <button class="boton-elegante" style="margin-right:6%;"
+                            (click)="goToWebsite('https://www.linkedin.com/in/ankush-sonar-15b4ba205/')">LINKEDIN</button>
+                        <button class="boton-elegante" (click)="downloadMyFile()">RESUME</button>
+                    </div>
+                </div>
 
         </app-home>
     </section>
@@ -34,7 +32,7 @@
     <section id="about">
         <div class="section2">
             <div class="about-container2">
-                <app-title  [title]="'about'"></app-title>
+                <app-title [title]="'about'"></app-title>
             </div>
             <div class="about-container">
                 <div class="about-section">
@@ -102,132 +100,133 @@
 
     <section id="services">
         <!-- <app-home [backgroundImage]="'assets/image1.jpg'"> -->
-            <div class="section3">
-                <div class="about-container3">
-                    <div class="about-section">
-                        <p class="d-flex">Experienced Web Developer with over 2+ years of expertise, proficient in HTML,
-                            CSS, JavaScript, Angular, Bootstrap, Java, Spring Boot, and MySQL . Object-oriented design
-                            and
-                            user-centered design are my main areas of interest. Excellent at changing visual hierarchy.
-                            A
-                            regular system improvement contributor. A trainer who was successful in inspiring a team of
-                            young developers to receive the highest honors in project as Lead.</p>
-                        <h3>Frontend Development:<span> 90%</span></h3>
-                        <div class="progress-bar">
-                            <div class="progress" id="progress" style="width:90%"></div>
-                        </div>
-                        <h3>Backend Development:<span> 85%</span></h3>
-                        <div class="progress-bar">
-                            <div class="progress" id="progress" style="width:85%"></div>
-                        </div>
-                        <h3>Databse:<span> 90%</span></h3>
-                        <div class="progress-bar">
-                            <div class="progress" id="progress" style="width:90%"></div>
-                        </div>
-                        <h3>Deployment:<span> 75%</span></h3>
-                        <div class="progress-bar">
-                            <div class="progress" id="progress" style="width:75%"></div>
-                        </div>
-                        <h3>Tools Knowledge:<span> 95%</span></h3>
-                        <div class="progress-bar">
-                            <div class="progress" id="progress" style="width:95%"></div>
-                        </div>
+            <!-- <div class="section3"> -->
+        <div class="section3-ani">
+            <div class="about-container3">
+                <div class="about-section">
+                    <p class="d-flex">Experienced Web Developer with over 2+ years of expertise, proficient in HTML,
+                        CSS, JavaScript, Angular, Bootstrap, Java, Spring Boot, and MySQL . Object-oriented design
+                        and
+                        user-centered design are my main areas of interest. Excellent at changing visual hierarchy.
+                        A
+                        regular system improvement contributor. A trainer who was successful in inspiring a team of
+                        young developers to receive the highest honors in project as Lead.</p>
+                    <h3>Frontend Development:<span> 90%</span></h3>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress" style="width:90%"></div>
+                    </div>
+                    <h3>Backend Development:<span> 85%</span></h3>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress" style="width:85%"></div>
+                    </div>
+                    <h3>Databse:<span> 90%</span></h3>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress" style="width:90%"></div>
+                    </div>
+                    <h3>Deployment:<span> 75%</span></h3>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress" style="width:75%"></div>
+                    </div>
+                    <h3>Tools Knowledge:<span> 95%</span></h3>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress" style="width:95%"></div>
                     </div>
                 </div>
-                <div class="about-container3">
-                    <div class="about-section">
-                        <p class="d-flex">Experienced Web Developer with over 2+ years of expertise, proficient in HTML,
-                            CSS, JavaScript, Angular, Bootstrap, Java, Spring Boot, and MySQL . Object-oriented design
-                            and
-                            user-centered design are my main areas of interest. Excellent at changing visual hierarchy.
-                            A
-                            regular system improvement contributor. A trainer who was successful in inspiring a team of
-                            young developers to receive the highest honors in project as Lead.</p>
-                        <h3>Frontend Development:<span> 90%</span></h3>
-                        <div class="progress-bar">
-                            <div class="progress" id="progress" style="width:90%"></div>
-                        </div>
-                        <h3>Backend Development:<span> 85%</span></h3>
-                        <div class="progress-bar">
-                            <div class="progress" id="progress" style="width:85%"></div>
-                        </div>
-                        <h3>Databse:<span> 90%</span></h3>
-                        <div class="progress-bar">
-                            <div class="progress" id="progress" style="width:90%"></div>
-                        </div>
-                        <h3>Deployment:<span> 75%</span></h3>
-                        <div class="progress-bar">
-                            <div class="progress" id="progress" style="width:75%"></div>
-                        </div>
-                        <h3>Tools Knowledge:<span> 95%</span></h3>
-                        <div class="progress-bar">
-                            <div class="progress" id="progress" style="width:95%"></div>
-                        </div>
+            </div>
+            <div class="about-container3">
+                <div class="about-section">
+                    <p class="d-flex">Experienced Web Developer with over 2+ years of expertise, proficient in HTML,
+                        CSS, JavaScript, Angular, Bootstrap, Java, Spring Boot, and MySQL . Object-oriented design
+                        and
+                        user-centered design are my main areas of interest. Excellent at changing visual hierarchy.
+                        A
+                        regular system improvement contributor. A trainer who was successful in inspiring a team of
+                        young developers to receive the highest honors in project as Lead.</p>
+                    <h3>Frontend Development:<span> 90%</span></h3>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress" style="width:90%"></div>
+                    </div>
+                    <h3>Backend Development:<span> 85%</span></h3>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress" style="width:85%"></div>
+                    </div>
+                    <h3>Databse:<span> 90%</span></h3>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress" style="width:90%"></div>
+                    </div>
+                    <h3>Deployment:<span> 75%</span></h3>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress" style="width:75%"></div>
+                    </div>
+                    <h3>Tools Knowledge:<span> 95%</span></h3>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress" style="width:95%"></div>
                     </div>
                 </div>
-                <div class="about-container3">
-                    <div class="about-section">
-                        <p class="d-flex">Experienced Web Developer with over 2+ years of expertise, proficient in HTML,
-                            CSS, JavaScript, Angular, Bootstrap, Java, Spring Boot, and MySQL . Object-oriented design
-                            and
-                            user-centered design are my main areas of interest. Excellent at changing visual hierarchy.
-                            A
-                            regular system improvement contributor. A trainer who was successful in inspiring a team of
-                            young developers to receive the highest honors in project as Lead.</p>
-                        <h3>Frontend Development:<span> 90%</span></h3>
-                        <div class="progress-bar">
-                            <div class="progress" id="progress" style="width:90%"></div>
-                        </div>
-                        <h3>Backend Development:<span> 85%</span></h3>
-                        <div class="progress-bar">
-                            <div class="progress" id="progress" style="width:85%"></div>
-                        </div>
-                        <h3>Databse:<span> 90%</span></h3>
-                        <div class="progress-bar">
-                            <div class="progress" id="progress" style="width:90%"></div>
-                        </div>
-                        <h3>Deployment:<span> 75%</span></h3>
-                        <div class="progress-bar">
-                            <div class="progress" id="progress" style="width:75%"></div>
-                        </div>
-                        <h3>Tools Knowledge:<span> 95%</span></h3>
-                        <div class="progress-bar">
-                            <div class="progress" id="progress" style="width:95%"></div>
-                        </div>
+            </div>
+            <div class="about-container3">
+                <div class="about-section">
+                    <p class="d-flex">Experienced Web Developer with over 2+ years of expertise, proficient in HTML,
+                        CSS, JavaScript, Angular, Bootstrap, Java, Spring Boot, and MySQL . Object-oriented design
+                        and
+                        user-centered design are my main areas of interest. Excellent at changing visual hierarchy.
+                        A
+                        regular system improvement contributor. A trainer who was successful in inspiring a team of
+                        young developers to receive the highest honors in project as Lead.</p>
+                    <h3>Frontend Development:<span> 90%</span></h3>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress" style="width:90%"></div>
+                    </div>
+                    <h3>Backend Development:<span> 85%</span></h3>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress" style="width:85%"></div>
+                    </div>
+                    <h3>Databse:<span> 90%</span></h3>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress" style="width:90%"></div>
+                    </div>
+                    <h3>Deployment:<span> 75%</span></h3>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress" style="width:75%"></div>
+                    </div>
+                    <h3>Tools Knowledge:<span> 95%</span></h3>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress" style="width:95%"></div>
                     </div>
                 </div>
-                <div class="about-container3">
-                    <div class="about-section">
-                        <p class="d-flex">Experienced Web Developer with over 2+ years of expertise, proficient in HTML,
-                            CSS, JavaScript, Angular, Bootstrap, Java, Spring Boot, and MySQL . Object-oriented design
-                            and
-                            user-centered design are my main areas of interest. Excellent at changing visual hierarchy.
-                            A
-                            regular system improvement contributor. A trainer who was successful in inspiring a team of
-                            young developers to receive the highest honors in project as Lead.</p>
-                        <h3>Frontend Development:<span> 90%</span></h3>
-                        <div class="progress-bar">
-                            <div class="progress" id="progress" style="width:90%"></div>
-                        </div>
-                        <h3>Backend Development:<span> 85%</span></h3>
-                        <div class="progress-bar">
-                            <div class="progress" id="progress" style="width:85%"></div>
-                        </div>
-                        <h3>Databse:<span> 90%</span></h3>
-                        <div class="progress-bar">
-                            <div class="progress" id="progress" style="width:90%"></div>
-                        </div>
-                        <h3>Deployment:<span> 75%</span></h3>
-                        <div class="progress-bar">
-                            <div class="progress" id="progress" style="width:75%"></div>
-                        </div>
-                        <h3>Tools Knowledge:<span> 95%</span></h3>
-                        <div class="progress-bar">
-                            <div class="progress" id="progress" style="width:95%"></div>
-                        </div>
+            </div>
+            <div class="about-container3">
+                <div class="about-section">
+                    <p class="d-flex">Experienced Web Developer with over 2+ years of expertise, proficient in HTML,
+                        CSS, JavaScript, Angular, Bootstrap, Java, Spring Boot, and MySQL . Object-oriented design
+                        and
+                        user-centered design are my main areas of interest. Excellent at changing visual hierarchy.
+                        A
+                        regular system improvement contributor. A trainer who was successful in inspiring a team of
+                        young developers to receive the highest honors in project as Lead.</p>
+                    <h3>Frontend Development:<span> 90%</span></h3>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress" style="width:90%"></div>
+                    </div>
+                    <h3>Backend Development:<span> 85%</span></h3>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress" style="width:85%"></div>
+                    </div>
+                    <h3>Databse:<span> 90%</span></h3>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress" style="width:90%"></div>
+                    </div>
+                    <h3>Deployment:<span> 75%</span></h3>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress" style="width:75%"></div>
+                    </div>
+                    <h3>Tools Knowledge:<span> 95%</span></h3>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress" style="width:95%"></div>
                     </div>
                 </div>
-                <!-- <div class="about-container">
+            </div>
+            <!-- <div class="about-container">
                     <div class="about-section">
                         <p class="d-flex">Experienced Web Developer with over 2+ years of expertise, proficient in HTML,
                             CSS, JavaScript, Angular, Bootstrap, Java, Spring Boot, and MySQL . Object-oriented design
@@ -258,14 +257,15 @@
                         </div>
                     </div>
                 </div> -->
-            </div>
+        <!-- </div> -->
+    </div>
         <!-- </app-home> -->
     </section>
 
     <section id="project">
         <div class="section4">
             <div class="about-container2">
-                <app-title style="margin-top: 70px;"  [title]="'project'"></app-title>
+                <app-title style="margin-top: 70px;" [title]="'project'"></app-title>
             </div>
             <div class="container" style="margin-top: 50px;">
                 <div class="image-section">
@@ -300,10 +300,10 @@
                         · ADAS utilizes sensors, cameras, radar, and other advanced technologies to provide real-time
                         information about the vehicle's
                         surroundings.</p>
-                        <p>
-                            · ADAS utilizes sensors, cameras, radar, and other advanced technologies to provide real-time
-                            information about the vehicle's
-                            surroundings.</p>
+                    <p>
+                        · ADAS utilizes sensors, cameras, radar, and other advanced technologies to provide real-time
+                        information about the vehicle's
+                        surroundings.</p>
                 </div>
             </div>
         </div>
