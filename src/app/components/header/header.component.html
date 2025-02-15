@@ -34,7 +34,7 @@
             <div class="about-container2">
                 <app-title [title]="'about'"></app-title>
             </div>
-            <div class="about-container">
+            <div class="about-container hidden">
                 <div class="about-section">
                     <p class="d-flex">Experienced Web Developer with over 2+ years of expertise, proficient in HTML,
                         CSS, JavaScript, Angular, Bootstrap, Java, Spring Boot, and MySQL . Object-oriented design
@@ -65,7 +65,7 @@
                     </div>
                 </div>
             </div>
-            <div class="about-container">
+            <div class="about-container hidden">
                 <div class="about-section">
                     <p class="d-flex">Experienced Web Developer with over 2+ years of expertise, proficient in HTML,
                         CSS, JavaScript, Angular, Bootstrap, Java, Spring Boot, and MySQL . Object-oriented design
@@ -89,13 +89,15 @@
                     <ul>
                         <li class="d-flex">
                             <span style="width: 100px;margin-left: -40px"><b>Frontend :</b></span>
-                            <span style="width: calc(100% - 130px);  color: #aeaeae;">Angular, TypeScript, JavaScript, Rxjs, Bootstrap</span>
+                            <span style="width: calc(100% - 130px);  color: #aeaeae;">Angular, TypeScript, JavaScript,
+                                Rxjs, Bootstrap</span>
                         </li>
                     </ul>
                     <ul>
                         <li class="d-flex">
                             <span style="width: 100px;margin-left: -40px"><b>Backend :</b></span>
-                            <span style="width: calc(100% - 130px);  color: #aeaeae;">Spring ,Spring Boot, Core Java Servelet, REST APIs</span>
+                            <span style="width: calc(100% - 130px);  color: #aeaeae;">Spring ,Spring Boot, Core Java
+                                Servelet, REST APIs</span>
                         </li>
                     </ul>
                     <ul>
@@ -107,7 +109,8 @@
                     <ul>
                         <li class="d-flex">
                             <span style="width: 100px;margin-left: -40px"><b>Tools:</b></span>
-                            <span style="width: calc(100% - 130px);  color: #aeaeae;">GIT, Github, SVN Tortoise, SonarQube, Maven, Jenkins</span>
+                            <span style="width: calc(100% - 130px);  color: #aeaeae;">GIT, Github, SVN Tortoise,
+                                SonarQube, Maven, Jenkins</span>
                         </li>
                     </ul>
                     <ul>
@@ -119,7 +122,8 @@
                     <ul>
                         <li class="d-flex">
                             <span style="width: 100px;margin-left: -40px"><b>Hobbies:</b></span>
-                            <span style="width: calc(100% - 130px);  color: #aeaeae;">Football, Reading Books, Animation & Ilustration
+                            <span style="width: calc(100% - 130px);  color: #aeaeae;">Football, Reading Books, Animation
+                                & Ilustration
                             </span>
                         </li>
                     </ul>
@@ -128,13 +132,13 @@
         </div>
     </section>
 
-    <section id="services">
+    <section id="career">
         <!-- <app-home [backgroundImage]="'assets/image1.jpg'"> -->
-        <div class="section3-ani">
+        <div class="section4">
             <div class="about-container2">
                 <app-title [title]="'exper'"></app-title>
             </div>
-            <div class="about-container3">
+            <div class="about-container3 hidden">
                 <div class="about-section">
                     <h1 style="color: #ff6347; font-size: 32px;"><b>FEB 2024 - PRESENT</b></h1>
                     <h3 style="color: #ffffff; font-size: 25px;">Web Developer | Asset Quality Module</h3>
@@ -161,7 +165,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="about-container3">
+            <div class="about-container3 hidden">
                 <div class="about-section">
                     <h1 style="color: #ff6347; font-size: 32px;"><b>AUG 2022- FEB 2024</b></h1>
                     <h3 style="color: #ffffff; font-size: 25px;">Web Developer | Fixed Asset Solution</h3>
@@ -193,11 +197,11 @@
     </section>
 
     <section id="project">
-        <div class="section4">
+        <div class="section3-ani">
             <div class="about-container2">
                 <app-title style="margin-top: 70px;" [title]="'project'"></app-title>
             </div>
-            <div class="container" style="margin-top: 50px;">
+            <!-- <div class="container" style="margin-top: 50px;">
                 <div class="image-section">
                     <img src="assets/periods.png" alt="Sample Image">
                 </div>
@@ -235,7 +239,54 @@
                         information about the vehicle's
                         surroundings.</p>
                 </div>
+            </div> -->
+            <div class="about-container4 hidden">
+                <div class="card card1">
+                    <img class="adve" src="https://shorelinebeachservices.com/wp-content/uploads/2016/04/Beach2131.jpg"
+                        alt="Mountains">
+                    <div class="text" style="color: #ff6347;">
+                        <h4 class="adv">Adventure</h4>
+                        <p style="color: #ffffff; font-size: 15px;">Developed scalable Angular UIs with CRUD functionality, integrated with Spring Boot REST
+                            APIs and MySQL for seamless data flow.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-container4 hidden">
+                <div class="card card1">
+                    <img class="adve" src="https://shorelinebeachservices.com/wp-content/uploads/2016/04/Beach2131.jpg"
+                        alt="Mountains">
+                    <div class="text" style="color: #ff6347;">
+                        <h4 class="adv">Adventure</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="about-container4 hidden">
+                <div class="card card1">
+                    <img class="adve" src="https://shorelinebeachservices.com/wp-content/uploads/2016/04/Beach2131.jpg"
+                        alt="Mountains">
+                    <div class="text" style="color: #ff6347;">
+                        <h4 class="adv">Adventure</h4>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+    
+
+    <footer class="footer">
+        <div class="footer-icons">
+          <a href="mailto:your-email@example.com" aria-label="Contact">
+            <i class="fas fa-envelope"></i> <!-- Contact Icon -->
+          </a>
+          <a href="path/to/your-resume.pdf" aria-label="Resume" download>
+            <i class="fas fa-file-alt"></i> <!-- Resume Icon -->
+          </a>
+          <a href="https://www.linkedin.com/in/your-profile" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i> <!-- LinkedIn Icon -->
+          </a>
+          <a href="https://github.com/your-username" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i> <!-- GitHub Icon -->
+          </a>
+        </div>
+      </footer>
 </div>

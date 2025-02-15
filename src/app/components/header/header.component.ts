@@ -12,18 +12,24 @@ export class HeaderComponent implements OnInit {
     if (isPlatformBrowser(this.platformId)) {
       this.scrollToSection('home');
       this.startInterval();
-      const sections = ['home', 'about', 'services', 'project'];
+      const sections = ['home', 'about', 'career', 'project'];
       window.addEventListener('scroll', this.onScroll.bind(this));
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               this.activeTab = entry.target.id;
+              entry.target.classList.add('show');
+            }else{
+              // entry.target.classList.remove('show');
             }
           });
         },
-        { threshold: 0.3 } // Trigger when 50% of the element is visible
+        { threshold: 0.5 } // Trigger when 50% of the element is visible
       );
+    
+      const hiddenSections = document.querySelectorAll('.hidden');
+      hiddenSections.forEach((el) => observer.observe(el));
 
       // Observe each section
       sections.forEach((section) => {
@@ -39,8 +45,9 @@ export class HeaderComponent implements OnInit {
   tabs = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
-    { id: 'services', label: 'Services' },
-    { id: 'project', label: 'Project' }
+    { id: 'career', label: 'Career' },
+    { id: 'project', label: 'Project' },
+    // { id: 'contact', label: 'Contact' }
   ];
   activeTab = 'home';
 
@@ -95,7 +102,7 @@ export class HeaderComponent implements OnInit {
 
   onScroll() {
     if (isPlatformBrowser(this.platformId)) {
-      const sections = ['home', 'about', 'services', 'project'];
+      const sections = ['home', 'about', 'career', 'project'];
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element && this.isElementInViewport(element)) {
@@ -134,4 +141,21 @@ export class HeaderComponent implements OnInit {
       window.location.href = 'https://www.linkedin.com/in/ankush-sonar-15b4ba205/';
     }
   }
+
+
+
+  // observeHiddenSections(): void {
+  //   const observer = new IntersectionObserver((entries) => {
+  //     entries.forEach((entry) => {  
+  //       if (entry.isIntersecting) {
+  //         entry.target.classList.add('active');
+  //       } else {
+  //         entry.target.classList.remove('remove');
+  //       }
+  //     });
+  //   });
+
+  //   const hiddenSections = document.querySelectorAll('.hidden');
+  //   hiddenSections.forEach((el) => observer.observe(el));
+  // }
 }
