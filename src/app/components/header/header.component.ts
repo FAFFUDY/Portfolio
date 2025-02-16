@@ -18,10 +18,12 @@ export class HeaderComponent implements OnInit {
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              this.activeTab = entry.target.id;
               entry.target.classList.add('show');
+              // entry.target.classList.add('tab-show');
+              this.activeTab = entry.target.id;
             }else{
-              // entry.target.classList.remove('show');
+              entry.target.classList.remove('glow');
+              // entry.target.classList.add('tab-show');
             }
           });
         },
@@ -30,6 +32,9 @@ export class HeaderComponent implements OnInit {
     
       const hiddenSections = document.querySelectorAll('.hidden');
       hiddenSections.forEach((el) => observer.observe(el));
+
+      // const glow = document.querySelectorAll('.tab-hidden');
+      // hiddenSections.forEach((el) => observer.observe(el));
 
       // Observe each section
       sections.forEach((section) => {
@@ -116,10 +121,12 @@ export class HeaderComponent implements OnInit {
   isElementInViewport(el: HTMLElement): boolean {
     if (isPlatformBrowser(this.platformId)) {
       const rect = el.getBoundingClientRect();
-      return (
-        rect.top >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
-      );
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+  
+      // Check if the element is at the center point
+      const elementAtCenter = document.elementFromPoint(centerX, centerY);
+      return elementAtCenter === el || el.contains(elementAtCenter);
     }
     return false;
   }

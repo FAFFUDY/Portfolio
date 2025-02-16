@@ -5,7 +5,7 @@ body, html {
     padding: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-// background-color: #000000;
+background-color: #000000;
 }
 
 @media (min-width: 768px) {
@@ -190,11 +190,11 @@ body, html {
 }
 
 footer {
-  background-color: #333; /* Dark background */
+  // background-color: #333; /* Dark background */
   color: #fff; /* White text */
   text-align: center;
-  padding: 20px 0;
-  border-top: 1px solid #555; /* Optional: Add a top border */
+  // padding: 20px 0;
+  // border-top: 1px solid #555; /* Optional: Add a top border */
   // background-image: url("assets/footer.jpg");
   // background-repeat: no-repeat;
   // background-size: cover;
@@ -204,9 +204,10 @@ footer {
 
 .footer-icons {
   display: flex;
+  flex-wrap: wrap;
   // justify-content: right;
   justify-content: center;
-  gap: 20px; /* Space between icons */
+  gap: 15%; /* Space between icons */
   margin-right: 12px;
 }
 
@@ -214,17 +215,89 @@ footer {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 70px; /* Size of the circle */
-  height: 70px; /* Size of the circle */
+  width: 100px; /* Size of the circle */
+  height: 100px; /* Size of the circle */
   background-color: #444; /* Circle background color */
   color: #fff; /* Icon color */
-  font-size: 40px; /* Icon size */
+  font-size: 50px; /* Icon size */
   border-radius: 50%; /* Makes it circular */
   text-decoration: none; /* Removes underline */
   transition: background-color 0.3s ease, color 0.3s ease;
+  // padding: 20%;
 }
 
 .footer-icons a:hover {
-  background-color: #0077b5; /* Hover background color */
+  background-color:#ff6347;; /* Hover background color */
   color: #fff; /* Hover icon color */
+  visibility: visible;
+}
+
+.wrapicon {
+  margin-top: 16px;
+  width: 50%;
+  display: flex;
+  // flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  // text-align: center;
+  flex-direction: column;
+}
+
+
+.tooltip {
+  top: 20px;
+  left: 40%;
+  color: #fff;
+  padding: 6px 10px;
+  visibility: visible;
+  font-size: 14px;
+  text-align: center;
+  justify-content: center;
+}
+
+
+@media (min-width: 768px) {
+.wrapicon {
+  margin-top: 16px;
+  width: 30%;
+  min-width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.footer-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px; /* Size of the circle */
+  height: 80px; /* Size of the circle */
+  background-color: #444; /* Circle background color */
+  color: #fff; /* Icon color */
+  font-size: 50px; /* Icon size */
+  border-radius: 50%; /* Makes it circular */
+  text-decoration: none; /* Removes underline */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  // padding: 20%;
+}
+
+.footer-icons {
+  display: flex;
+  // flex-wrap: nowrap;
+  // justify-content: right;
+  justify-content: center;
+  gap: 12%; /* Space between icons */
+  margin-right: 12px;
+}
+
+.footer-icons {
+  display: flex;
+  flex-wrap: nowrap;
+  // justify-content: right;
+  justify-content: center;
+  gap: 15%; /* Space between icons */
+  margin-right: 12px;
+}
+
 }

@@ -1,7 +1,7 @@
 .parallax-section {
     height: 100vh; /* Full viewport height */
     background-attachment: fixed; /* Creates the parallax effect */
-    background-position: bottom right;
+    background-position: right calc(100% + 130px);
     background-repeat: no-repeat;
     background-size: cover;
     border: black;
@@ -13,11 +13,11 @@
     // padding-top: 18px;
 }
 
-// @media (min-width: 768px) {
-//     .parallax-section {
-//         background-image: url("assets/ankush_snr");
-//     }
-// }
+@media (min-width: 768px) {
+    .parallax-section {
+        background-position:center right;
+    }
+}
 
 .parallax-content {
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */

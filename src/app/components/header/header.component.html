@@ -4,6 +4,7 @@
             <ul>
                 <li *ngFor="let tab of tabs" (click)="scrollToSection(tab.id)">
                     <a [ngClass]="{ active: activeTab === tab.id }">{{ tab.label }}</a>
+                    <!-- <a class="tab-hidden">{{ tab.label }}</a> -->
                 </li>
             </ul>
         </nav>
@@ -11,7 +12,7 @@
 
 
     <section id="home">
-        <app-home [backgroundImage]="'assets/ankush_snr2.jpeg'">
+        <app-home [backgroundImage]="'assets/ankush_snr.jpeg'">
             <div class="container-ani">
                 <div class="content">
                     <div class="titlecontainer animated-title" style="margin-top: 38px;">
@@ -21,8 +22,8 @@
                         <h1 class="animated-title" style="color: #ff6347">ANKUSH NEELAKANTH SONAR</h1>
                         <h2 *ngIf="currentDiv" [ngClass]="{'animated-title': currentDiv}">{{ currentDiv }}</h2>
                         <button class="boton-elegante" style="margin-right:6%;"
-                            (click)="goToWebsite('https://www.linkedin.com/in/ankush-sonar-15b4ba205/')">LINKEDIN</button>
-                        <button class="boton-elegante" (click)="downloadMyFile()">RESUME</button>
+                            (click)="goToWebsite('https://www.linkedin.com/in/ankush-sonar-15b4ba205/')"><i class="fab fa-linkedin" style="color:blue;  margin-right:10px;"></i>LINKEDIN</button>
+                        <button class="boton-elegante" (click)="downloadMyFile()"><i class="fa-solid fa-download" style="color:blue; margin-right:10px;"></i>RESUME</button>
                     </div>
                 </div>
             </div>
@@ -83,7 +84,7 @@
                     <ul>
                         <li class="d-flex">
                             <span style="width: 100px;margin-left: -40px"><b>Language:</b></span>
-                            <span style="width: calc(100% - 130px);  color: #aeaeae;">Java,Python</span>
+                            <span style="width: calc(100% - 130px);  color: #aeaeae;">Java, Python</span>
                         </li>
                     </ul>
                     <ul>
@@ -129,6 +130,77 @@
                     </ul>
                 </div>
             </div>
+            <!-- <div class="about-container hidden">
+                <div class="about-section">
+                    <p class="d-flex">Experienced Web Developer with over 2+ years of expertise, proficient in HTML,
+                        CSS, JavaScript, Angular, Bootstrap, Java, Spring Boot, and MySQL . Object-oriented design
+                        and
+                        user-centered design are my main areas of interest. Excellent at changing visual hierarchy.
+                        A
+                        regular system improvement contributor. A trainer who was successful in inspiring a team of
+                        young developers to receive the highest honors in project as Lead.</p>
+                    <ul>
+                        <li class="d-flex">
+                            <span style="width: 100px;margin-left: -40px"><b>Profile:</b></span>
+                            <span style="width: calc(100% - 130px); color: #aeaeae;">Web Developer</span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="d-flex">
+                            <span style="width: 100px;margin-left: -40px"><b>Language:</b></span>
+                            <span style="width: calc(100% - 130px);  color: #aeaeae;">
+                                <button href="path/to/your-resume.pdf" aria-label="Resume" download>
+                                    <i class="fa-brands fa-python"></i> Python
+                                </button>
+                                <button href="path/to/your-resume.pdf" aria-label="Resume" download>
+                                    <i class="fa-brands fa-java"></i> Java
+                                </button>
+                            </span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="d-flex">
+                            <span style="width: 100px;margin-left: -40px"><b>Frontend :</b></span>
+                            <span style="width: calc(100% - 130px);  color: #aeaeae;">Angular, TypeScript, JavaScript,
+                                Rxjs, Bootstrap</span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="d-flex">
+                            <span style="width: 100px;margin-left: -40px"><b>Backend :</b></span>
+                            <span style="width: calc(100% - 130px);  color: #aeaeae;">Spring ,Spring Boot, Core Java
+                                Servelet, REST APIs</span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="d-flex">
+                            <span style="width: 100px;margin-left: -40px"><b>Data Base:</b></span>
+                            <span style="width: calc(100% - 130px);  color: #aeaeae;">MySQL, MongoDB</span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="d-flex">
+                            <span style="width: 100px;margin-left: -40px"><b>Tools:</b></span>
+                            <span style="width: calc(100% - 130px);  color: #aeaeae;">GIT, Github, SVN Tortoise,
+                                SonarQube, Maven, Jenkins</span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="d-flex">
+                            <span style="width: 100px;margin-left: -40px"><b>Language:</b></span>
+                            <span style="width: calc(100% - 130px);  color: #aeaeae;">English, Hindi, Marathi</span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="d-flex">
+                            <span style="width: 100px;margin-left: -40px"><b>Hobbies:</b></span>
+                            <span style="width: calc(100% - 130px);  color: #aeaeae;">Football, Reading Books, Animation
+                                & Ilustration
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div> -->
         </div>
     </section>
 
@@ -138,6 +210,10 @@
             <div class="about-container2">
                 <app-title [title]="'exper'"></app-title>
             </div>
+            <div class="about-container2">
+                <h2 style="font-size: 1.8em;">EXPERIENCE</h2>
+            </div>
+            <div class="horizontal-line"></div>
             <div class="about-container3 hidden">
                 <div class="about-section">
                     <h1 style="color: #ff6347; font-size: 32px;"><b>FEB 2024 - PRESENT</b></h1>
@@ -193,10 +269,51 @@
                     </ul>
                 </div>
             </div>
+            <div class="about-container2">
+                <h2 style="font-size: 1.8em;">EDUCATION</h2>
+            </div>
+            <div class="horizontal-line"></div>
+            <div class="about-container3 hidden">
+                <div class="about-section">
+                    <h1 style="color: #ff6347; font-size: 32px;"><b>Aug 2018 - May 2022</b></h1>
+                    <h3 style="color: #ffffff; font-size: 25px;"> Bachelor of Engineering</h3>
+                    <h3 style="color: #aeaeae;">Pune University, India</h3>
+                    <ul style="color: #aeaeae;">
+                        Relevant Coursework: C Language, OOPS, Mathematics, Figma, Mango DB, Java.
+                    </ul>
+                </div>
+            </div>
+            <div class="about-container3 hidden">
+                <div class="about-section">
+                    <h1 style="color: #ff6347; font-size: 32px;"><b>Aug 2016 - May 2018</b></h1>
+                    <h3 style="color: #ffffff; font-size: 25px;">Degree of Science</h3>
+                    <h3 style="color: #aeaeae;">YMC Institute of Science, India</h3>
+                    <ul style="color: #aeaeae;">
+                        Relevant Coursework: C , C++, Assembly Language, OOPS, DSA, HTML, CSS.
+                    </ul>
+                </div>
+            </div>
+            <div class="about-container2">
+                <h2 style="font-size: 1.8em;">CERTIFICATION</h2>
+            </div>
+            <div class="horizontal-line"></div>
+            <div class="about-container3 hidden">
+                <div class="about-section">
+                    <h3 style="color: #ffffff; font-size: 25px;">Java Programming: Solving Problems with Software</h3>
+                    <h3 style="color: #aeaeae;">Duke University (USA) | Coursera</h3>
+                </div>
+            </div>
+            <div class="about-container3 hidden">
+                <div class="about-section">
+                    <h3 style="color: #ffffff; font-size: 25px;">Programming Foundations with JavaScript, HTML and CSS |
+                    </h3>
+                    <h3 style="color: #aeaeae;">Michigan University (USA) | Coursera</h3>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="project">
+    <section id="career">
         <div class="section3-ani">
             <div class="about-container2">
                 <app-title style="margin-top: 70px;" [title]="'project'"></app-title>
@@ -242,51 +359,101 @@
             </div> -->
             <div class="about-container4 hidden">
                 <div class="card card1">
-                    <img class="adve" src="https://shorelinebeachservices.com/wp-content/uploads/2016/04/Beach2131.jpg"
-                        alt="Mountains">
+                    <img class="adve" src="assets/periods.png" alt="Mountains">
                     <div class="text" style="color: #ff6347;">
-                        <h4 class="adv">Adventure</h4>
-                        <p style="color: #ffffff; font-size: 15px;">Developed scalable Angular UIs with CRUD functionality, integrated with Spring Boot REST
-                            APIs and MySQL for seamless data flow.</p>
+                        <h2 class="adv">Period Tracking App</h2>
+                        <p style="color: #aeaeae; font-size: 15px;">A period-tracking app built using Angular for the
+                            frontend, Spring Boot for the backend, and MySQL for the database provides a seamless and
+                            user-friendly experience. It allows users to log menstrual cycles, predict future periods,
+                            and track symptoms. The app ensures data security, scalability, and real-time updates,
+                            making it a reliable tool for menstrual health management.</p>
                     </div>
                 </div>
             </div>
             <div class="about-container4 hidden">
                 <div class="card card1">
-                    <img class="adve" src="https://shorelinebeachservices.com/wp-content/uploads/2016/04/Beach2131.jpg"
-                        alt="Mountains">
+                    <img class="adve" src="assets/adas.gif" alt="Mountains">
                     <div class="text" style="color: #ff6347;">
-                        <h4 class="adv">Adventure</h4>
+                        <h2 class="adv">Advance Driver Assistance System</h2>
+                        <p style="color: #aeaeae; font-size: 15px;">An ADAS (Advanced Driver Assistance System) for a
+                            robotic car, developed using Python and TensorFlow, leverages machine learning for real-time
+                            object detection, lane tracking, and collision avoidance. The system processes sensor data
+                            to enhance safety and autonomy, providing features like adaptive cruise control and
+                            automated braking, ensuring a smarter and safer driving experience.</p>
+
                     </div>
                 </div>
             </div>
             <div class="about-container4 hidden">
                 <div class="card card1">
-                    <img class="adve" src="https://shorelinebeachservices.com/wp-content/uploads/2016/04/Beach2131.jpg"
-                        alt="Mountains">
+                    <img class="adve" src="assets/portfolio.jpg" alt="Mountains">
                     <div class="text" style="color: #ff6347;">
-                        <h4 class="adv">Adventure</h4>
+                        <h2 class="adv">AngularPortfolio</h2>
+                        <p style="color: #aeaeae; font-size: 15px;">Instead of relying on traditional tools like
+                            WordPress or Canva, I built my portfolio from scratch using Angular for the frontend,
+                            Bootstrap for the UI, and TypeScript for seamless development. This custom approach
+                            highlights my technical expertise, creativity, and ability to deliver robust, scalable, and
+                            visually appealing web applications tailored to my unique style.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
 
-    <footer class="footer">
-        <div class="footer-icons">
-          <a href="mailto:your-email@example.com" aria-label="Contact">
-            <i class="fas fa-envelope"></i> <!-- Contact Icon -->
-          </a>
-          <a href="path/to/your-resume.pdf" aria-label="Resume" download>
-            <i class="fas fa-file-alt"></i> <!-- Resume Icon -->
-          </a>
-          <a href="https://www.linkedin.com/in/your-profile" target="_blank" aria-label="LinkedIn">
-            <i class="fab fa-linkedin"></i> <!-- LinkedIn Icon -->
-          </a>
-          <a href="https://github.com/your-username" target="_blank" aria-label="GitHub">
-            <i class="fab fa-github"></i> <!-- GitHub Icon -->
-          </a>
+
+    <footer class="project">
+        <div class="section2">
+            <div class="about-container2 hidden">
+                <div class="footer-icons">
+                    <div class="wrapicon">
+                        <a href="mailto:your-ankushsonar31@gmail.com" aria-label="Contact">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <h2 class="tooltip hidden" type="mail" style="font-size: 18px; color: #ff6347;">MAIL</h2>
+                        <p class="tooltip hidden" type="mail" style="margin-top: -8px;">ankushsonar31&#64;gmail.com</p>
+                    </div>
+                    <div class="wrapicon">
+                        <a (click)="downloadMyFile()" aria-label="Resume" download>
+                            <i class="fas fa-file-alt"></i>
+                        </a>
+                        <h2 class="tooltip hidden" type="mail" style="font-size: 18px; color: #ff6347;">Resume</h2>
+                        <p class="tooltip hidden" type="mail" style="margin-top: -8px;">Download</p>
+                    </div>
+                    <div class="wrapicon">
+                        <a href="https://www.linkedin.com/in/ankush-sonar-15b4ba205" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <h2 class="tooltip hidden" type="mail" style="font-size: 18px; color: #ff6347;">LINKEDIN</h2>
+                        <p class="tooltip hidden" type="mail" style="margin-top: -8px;">Visit</p>
+                    </div>
+                    <div class="wrapicon">
+                        <a href="https://github.com/FAFFUDY" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <h2 class="tooltip hidden" type="mail" style="font-size: 18px; color: #ff6347;">GITHUB</h2>
+                        <p class="tooltip hidden" type="mail" style="margin-top: -8px;">View</p>
+                    </div>
+                    <div class="wrapicon">
+                        <a href="https://github.com/FAFFUDY" target="_blank" aria-label="GitHub">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <h2 class="tooltip hidden" type="mail" style="font-size: 18px; color: #ff6347;">INSTAGRAM</h2>
+                        <p class="tooltip hidden" type="mail" style="margin-top: -8px;">View</p>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="about-container-form hidden">
+                <form class="form">
+                    <div class="formtitle">Welcome,<br><span>sign up to continue</span></div>
+                    <input type="text" placeholder="Name" name="name" class="input">
+                    <input type="email" placeholder="Email" name="email" class="input">
+                    <input type="comment" placeholder="Query..." name="query" class="input2">
+                    <div class="login-with">
+                    </div>
+                    <button class="button-confirm">Send →</button>
+                </form>
+            </div> -->
         </div>
-      </footer>
+        <h4 style="text-align: center; background-color: black; color: #f7f7f7; padding:30px;">Copyright ©2025 All rights reserved | This template is made by <a  href="https://www.linkedin.com/in/ankush-sonar-15b4ba205">ANKUSH SONAR</a></h4>
+    </footer>
 </div>
