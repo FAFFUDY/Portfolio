@@ -135,7 +135,7 @@ export class HeaderComponent implements OnInit {
     if (isPlatformBrowser(this.platformId)) {
       const link = document.createElement('a');
       link.setAttribute('target', '_blank');
-      link.setAttribute('href', 'assets/');
+      link.setAttribute('href', '/assets/Ankush_Sonar.pdf');
       link.setAttribute('download', `Ankush_Sonar.pdf`);
       document.body.appendChild(link);
       link.click();
