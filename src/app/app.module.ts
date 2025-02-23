@@ -9,6 +9,7 @@ import { CardComponent } from './components/card/card.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SocialMediaComponent } from './components/social-media/social-media.component';
 import { TitleComponent } from './components/title/title.component';
+import { ButtonMultiAniComponent } from './components/button-multi-ani/button-multi-ani.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { TitleComponent } from './components/title/title.component';
     HeaderComponent,
     SocialMediaComponent,
     TitleComponent,
+    ButtonMultiAniComponent,
   ],
   imports: [
     BrowserModule,

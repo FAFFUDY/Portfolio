@@ -96,6 +96,8 @@ background-color: #000000;
 }
 
 
+
+
 .titlecontainer {
   width: 80%;
   max-width: 800px;
@@ -201,7 +203,7 @@ footer {
 
 .footer-icons a:hover {
   background-color:#ff6347;; /* Hover background color */
-  color: #fff; /* Hover icon color */
+  color: #bb86fc;
   visibility: visible;
 }
 
@@ -248,6 +250,7 @@ footer {
   height: 80px; /* Size of the circle */
   background-color: #444; /* Circle background color */
   color: #fff; /* Icon color */
+  // color: #bb86fc;
   font-size: 50px; /* Icon size */
   border-radius: 50%; /* Makes it circular */
   text-decoration: none; /* Removes underline */
@@ -269,8 +272,14 @@ footer {
   flex-wrap: nowrap;
   // justify-content: right;
   justify-content: center;
-  gap: 15%; /* Space between icons */
+  gap: 12%; /* Space between icons */
   margin-right: 12px;
 }
 
+}
+@media (min-width: 1023px) {
+  .footer-icons {
+    gap: 15%; /* Space between icons */
+  }
+  
 }

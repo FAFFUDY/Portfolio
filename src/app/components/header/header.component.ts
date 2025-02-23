@@ -145,7 +145,7 @@ export class HeaderComponent implements OnInit {
 
   goToWebsite(String: any) {
     if (isPlatformBrowser(this.platformId)) {
-      window.location.href = 'https://www.linkedin.com/in/ankush-sonar-15b4ba205/';
+      window.location.href = String;
     }
   }
 

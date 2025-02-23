@@ -27,8 +27,9 @@
                     </div>
                 </div>
             </div> -->
+            <div class="container-home">
             <app-card></app-card>
-            
+        </div>
         </app-home>
     </section>
 
@@ -46,24 +47,24 @@
                         A
                         regular system improvement contributor. A trainer who was successful in inspiring a team of
                         young developers to receive the highest honors in project as Lead.</p>
-                    <h3>Frontend Development:<span> 90%</span></h3>
+                    <h3>Frontend Development:<span style="color: #bb86fc;"> 90%</span></h3>
                     <div class="hidden progress-bar">
                         <div class="progress" id="progress" style="width:90%"></div>
                     </div>
-                    <h3>Backend Development:<span> 85%</span></h3>
+                    <h3>Backend Development:<span style="color: #bb86fc;"> 85%</span></h3>
                     <div class="progress-bar">
                         <div class="progress" id="progress" style="width:85%"></div>
                     </div>
                     
-                    <h3>Databse:<span> 90%</span></h3>
+                    <h3>Databse:<span style="color: #bb86fc;"> 90%</span></h3>
                     <div class="progress-bar">
                         <div class="progress" id="progress" style="width:90%"></div>
                     </div>
-                    <h3>Deployment:<span> 75%</span></h3>
+                    <h3>Deployment:<span style="color: #bb86fc;"> 85%</span></h3>
                     <div class="progress-bar">
-                        <div class="progress" id="progress" style="width:75%"></div>
+                        <div class="progress" id="progress" style="width:85%"></div>
                     </div>
-                    <h3>Tools Knowledge:<span> 95%</span></h3>
+                    <h3>Tools Knowledge:<span style="color: #bb86fc;"> 95%</span></h3>
                     <div class="progress-bar">
                         <div class="progress" id="progress" style="width:95%"></div>
                     </div>
@@ -71,13 +72,6 @@
             </div>
             <div class="about-container hidden">
                 <div class="about-section">
-                    <p class="d-flex">Experienced Web Developer with over 2+ years of expertise, proficient in HTML,
-                        CSS, JavaScript, Angular, Bootstrap, Java, Spring Boot, and MySQL . Object-oriented design
-                        and
-                        user-centered design are my main areas of interest. Excellent at changing visual hierarchy.
-                        A
-                        regular system improvement contributor. A trainer who was successful in inspiring a team of
-                        young developers to receive the highest honors in project as Lead.</p>
                     <ul>
                         <li class="d-flex">
                             <span style="width: 100px;margin-left: -40px"><b>Profile:</b></span>
@@ -131,6 +125,7 @@
                             </span>
                         </li>
                     </ul>
+                    <app-button-multi-ani></app-button-multi-ani>
                 </div>
             </div>
             <!-- <div class="about-container hidden">
@@ -214,7 +209,7 @@
                 <app-title [title]="'exper'"></app-title>
             </div>
             <div class="about-container2">
-                <h2 style="font-size: 1.8em;">EXPERIENCE</h2>
+                <h2 class="header-career" style="font-size: 1.8em;">EXPERIENCE</h2>
             </div>
             <div class="horizontal-line"></div>
             <div class="about-container3 hidden">
@@ -273,31 +268,31 @@
                 </div>
             </div>
             <div class="about-container2">
-                <h2 style="font-size: 1.8em;">EDUCATION</h2>
+                <h2 class="header-career" style="font-size: 1.8em;">EDUCATION</h2>
             </div>
             <div class="horizontal-line"></div>
             <div class="about-container3 hidden">
                 <div class="about-section">
                     <h1 style="color: #ff6347; font-size: 32px;"><b>Aug 2018 - May 2022</b></h1>
-                    <h3 style="color: #ffffff; font-size: 25px;"> Bachelor of Engineering</h3>
-                    <h3 style="color: #aeaeae;">Pune University, India</h3>
-                    <ul style="color: #aeaeae;">
+                    <h3 style="color: #ffffff; font-size: 25px;"> Bachelor of Engineering | Pune University, India</h3>
+                    <h3 style="color: #bb86fc">8.84 GPA</h3>
+                    <!-- <ul style="color: #aeaeae;">
                         Relevant Coursework: C Language, OOPS, Mathematics, Figma, Mango DB, Java.
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
             <div class="about-container3 hidden">
                 <div class="about-section">
                     <h1 style="color: #ff6347; font-size: 32px;"><b>Aug 2016 - May 2018</b></h1>
-                    <h3 style="color: #ffffff; font-size: 25px;">Degree of Science</h3>
-                    <h3 style="color: #aeaeae;">YMC Institute of Science, India</h3>
-                    <ul style="color: #aeaeae;">
+                    <h3 style="color: #ffffff; font-size: 25px;">Degree of Science | YMC Institute of Science, India</h3>
+                    <h3 style="color: #bb86fc">8.2 GPA</h3>
+                    <!-- <ul style="color: #aeaeae;">
                         Relevant Coursework: C , C++, Assembly Language, OOPS, DSA, HTML, CSS.
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
             <div class="about-container2">
-                <h2 style="font-size: 1.8em;">CERTIFICATION</h2>
+                <h2 class="header-career" style="font-size: 1.8em;">CERTIFICATION</h2>
             </div>
             <div class="horizontal-line"></div>
             <div class="about-container3 hidden">
@@ -360,7 +355,7 @@
                         surroundings.</p>
                 </div>
             </div> -->
-            <div class="about-container4 hidden">
+            <div class="about-container4 hidden" (click)="goToWebsite('https://github.com/FAFFUDY/PT-prediction')">
                 <div class="card card1">
                     <img class="adve" src="assets/periods.png" alt="Mountains">
                     <div class="text" style="color: #ff6347;">
@@ -373,7 +368,7 @@
                     </div>
                 </div>
             </div>
-            <div class="about-container4 hidden">
+            <div class="about-container4 hidden" (click)="goToWebsite('https://github.com/FAFFUDY/ADAS')">
                 <div class="card card1">
                     <img class="adve" src="assets/adas.gif" alt="Mountains">
                     <div class="text" style="color: #ff6347;">
@@ -387,7 +382,7 @@
                     </div>
                 </div>
             </div>
-            <div class="about-container4 hidden">
+            <div class="about-container4 hidden" (click)="goToWebsite('https://github.com/FAFFUDY/Portfolio')">
                 <div class="card card1">
                     <img class="adve" src="assets/portfolio.jpg" alt="Mountains">
                     <div class="text" style="color: #ff6347;">
@@ -409,18 +404,18 @@
             <div class="about-container2 hidden">
                 <div class="footer-icons">
                     <div class="wrapicon">
-                        <a href="mailto:your-ankushsonar31@gmail.com" aria-label="Contact">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                        <h2 class="tooltip hidden" type="mail" style="font-size: 18px; color: #ff6347;">MAIL</h2>
-                        <p class="tooltip hidden" type="mail" style="margin-top: -8px;">ankushsonar31&#64;gmail.com</p>
-                    </div>
-                    <div class="wrapicon">
                         <a (click)="downloadMyFile()" aria-label="Resume" download>
                             <i class="fas fa-file-alt"></i>
                         </a>
                         <h2 class="tooltip hidden" type="mail" style="font-size: 18px; color: #ff6347;">Resume</h2>
                         <p class="tooltip hidden" type="mail" style="margin-top: -8px;">Download</p>
+                    </div>
+                    <div class="wrapicon">
+                        <a href="mailto:your-ankushsonar31@gmail.com" aria-label="Contact">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <h2 class="tooltip hidden" type="mail" style="font-size: 18px; color: #ff6347;">MAIL</h2>
+                        <p class="tooltip hidden" type="mail" style="margin-top: -8px;">ankushsonar31&#64;gmail.com</p>
                     </div>
                     <div class="wrapicon">
                         <a href="https://www.linkedin.com/in/ankush-sonar-15b4ba205" target="_blank" aria-label="LinkedIn">

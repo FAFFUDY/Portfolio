@@ -1,4 +1,5 @@
-import {Component, ElementRef, HostListener, ViewChild, AfterViewInit, OnInit } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import {Component, ElementRef, HostListener, ViewChild, AfterViewInit, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { gsap } from 'gsap';
 
 
@@ -13,7 +14,8 @@ import { gsap } from 'gsap';
     'SOFTWARE ENGINEER',
     'JAVA DEVELOPER',
     'WEB DEVELOPER',
-    'FULL STACK DEVELOPER'
+    'FULL STACK DEV.',
+    'DATA ANALYST'
   ];
   private typingSpeed: number = 100;
   private deletingSpeed: number = 50;
@@ -26,6 +28,8 @@ import { gsap } from 'gsap';
     this.initAnimations();
     this.typeText();
   }
+
+    constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
 
   private initAnimations() {
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
@@ -86,5 +90,23 @@ import { gsap } from 'gsap';
       () => this.typeText(),
       this.isDeleting ? this.deletingSpeed : this.typingSpeed
     );
+  }
+
+  downloadMyFile() {
+    if (isPlatformBrowser(this.platformId)) {
+      const link = document.createElement('a');
+      link.setAttribute('target', '_blank');
+      link.setAttribute('href', '/assets/Ankush_Sonar.pdf');
+      link.setAttribute('download', `Ankush_Sonar.pdf`);
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+    }
+  }
+
+  goToWebsite(String: any) {
+    if (isPlatformBrowser(this.platformId)) {
+      window.location.href = 'https://www.linkedin.com/in/ankush-sonar-15b4ba205/';
+    }
   }
 }

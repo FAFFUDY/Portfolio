@@ -170,6 +170,12 @@
   }
 }
 
+.header-career{
+    background: linear-gradient(white,white);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 ////////////////////////////////////////////////////SECTION 2//////////////////////////////////////////////
 .typing-animation {
   position: relative;
@@ -212,6 +218,9 @@
   max-width: 1200px;
 }
 
+.container-home{
+  width: 100%;
+}
 
 .section {
   height: 100vh;
@@ -234,7 +243,7 @@
   padding-top: 90px;
   padding-bottom: 150px;
   font-size: 24px;
-  background-color: #1a1a1a;
+  background-color: #000000;
   color: #fff;
   // border-bottom: 1px solid #333;
 
@@ -258,7 +267,7 @@
   justify-content: center;
   // align-items: center;
   font-size: 24px;
-  background-color: #1a1a1a;
+  background-color: #000000;
   color: #fff;
   // border-bottom: 1px solid #333;
   padding-bottom: 50px;
@@ -421,7 +430,7 @@
 .horizontal-line {
   width: 100%; /* Full width */
   height: 3px; /* Thickness of the line */
-  background-color: #ff6347; /* Color of the line */
+  background-color: #ff9747; /* Color of the line */
   margin:-23px 39px;  /* Space above and below the line */
   transition: width 0.3s ease;
 }
@@ -743,6 +752,10 @@
 .adv {
   color: #ffffff;
   margin-top: 0;
+}
+
+.adv:hover{
+  color: #bb86fc;
 }
 
 .fash {
