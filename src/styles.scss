@@ -75,8 +75,8 @@ background-color: #000000;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 10%;
+  height: 10%;
   background: radial-gradient(
     circle,
     rgba(255, 255, 255, 0.25) 0%,
@@ -93,33 +93,6 @@ background-color: #000000;
 .boton-elegante:hover {
   border-color: #f13e3e;
   background: #ef0d0d;
-}
-
-@media (max-width: 768px) {
-  .boton-elegante {
-    width: 30%;
-    height: 10%;
-    font-size: 1.2rem;
-    justify-content: center;
-    padding: 12;
-  }
-  
-}
-
-@media (max-width: 480px) {
-  .boton-elegante {
-    width: 35%;
-    height: 10%;
-    font-size: 0.6rem;
-    justify-content: center;
-    padding: 12px;
-  }
-}
-
-@media (max-width: 768px) {
-  .typing-effect-header {
-    margin-top: 300px;
-  }
 }
 
 

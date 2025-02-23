@@ -10,7 +10,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
-      this.scrollToSection('home');
+      // this.scrollToSection('home');
       this.startInterval();
       const sections = ['home', 'about', 'career', 'project'];
       window.addEventListener('scroll', this.onScroll.bind(this));

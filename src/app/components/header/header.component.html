@@ -13,20 +13,22 @@
 
     <section id="home">
         <app-home [backgroundImage]="'assets/ankush_snr.jpeg'">
-            <div class="container-ani">
+            <!-- <div class="container-ani">
                 <div class="content">
                     <div class="titlecontainer animated-title" style="margin-top: 38px;">
                         <h1 class="animated-title" style="margin-bottom: -2%;color: #ff6347">HELLO!
                             <span style="color: #f7f7f7">I'M</span>
                         </h1>
                         <h1 class="animated-title" style="color: #ff6347">ANKUSH NEELAKANTH SONAR</h1>
-                        <h2 *ngIf="currentDiv" [ngClass]="{'animated-title': currentDiv}">{{ currentDiv }}</h2>
+                        <h2 *ngIf="currentDiv" [ngClass]="{'typing-animation': currentDiv}">{{ currentDiv }}</h2>
                         <button class="boton-elegante" style="margin-right:6%;"
                             (click)="goToWebsite('https://www.linkedin.com/in/ankush-sonar-15b4ba205/')"><i class="fab fa-linkedin" style="color:blue;  margin-right:10px;"></i>LINKEDIN</button>
                         <button class="boton-elegante" (click)="downloadMyFile()"><i class="fa-solid fa-download" style="color:blue; margin-right:10px;"></i>RESUME</button>
                     </div>
                 </div>
-            </div>
+            </div> -->
+            <app-card></app-card>
+            
         </app-home>
     </section>
 
@@ -45,13 +47,14 @@
                         regular system improvement contributor. A trainer who was successful in inspiring a team of
                         young developers to receive the highest honors in project as Lead.</p>
                     <h3>Frontend Development:<span> 90%</span></h3>
-                    <div class="progress-bar">
+                    <div class="hidden progress-bar">
                         <div class="progress" id="progress" style="width:90%"></div>
                     </div>
                     <h3>Backend Development:<span> 85%</span></h3>
                     <div class="progress-bar">
                         <div class="progress" id="progress" style="width:85%"></div>
                     </div>
+                    
                     <h3>Databse:<span> 90%</span></h3>
                     <div class="progress-bar">
                         <div class="progress" id="progress" style="width:90%"></div>
@@ -313,7 +316,7 @@
         </div>
     </section>
 
-    <section id="career">
+    <section id="project">
         <div class="section3-ani">
             <div class="about-container2">
                 <app-title style="margin-top: 70px;" [title]="'project'"></app-title>
